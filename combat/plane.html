@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #plane {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+        #div1 {
+            width: 50px;
+            height: 50px;
+            top: 50px;
+            left: 50px;
+            background-color: red;
+            position: absolute;
+        }
+
+        #div2 {
+            width: 50px;
+            height: 50px;
+            top: 125px;
+            left: 125px;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute;
+        }
+
+        .selectable {
+            border: none;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+        }
+
+            .selectable:focus {
+                border: 2px dotted white;
+                outline: 0;
+            }
+    </style>
+    <div id="plane">
+        <button id="div1" class="selectable"></button>
+        <button id="div2" class="selectable"></button>
+    </div>
+    <script>
+        $("#plane").click(function () {
+            $("#div1").css({ top: "200px" });
+            $("#div1").css({ left: "225px" });
+        });
+    </script>
+</body>
+</html>

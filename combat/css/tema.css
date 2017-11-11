@@ -1,0 +1,301 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.fwb {
+    font-weight: bold;
+}
+
+.fwbl {
+    font-weight: 900;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.heroResim {
+    width: 100%;
+    height: 515px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.antrasit {
+    color: #222;
+}
+
+body .pie_progress {
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    background: rgba(255, 255,255, 0.75);
+    border-radius: 50%;
+}
+
+body .pie_progress__number {
+    font-size: 30px;
+}
+
+body .pie_progress__label {
+    margin-top: 25px;
+}
+
+.carousel-control {
+    background-image: none !important;
+}
+
+    .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+        margin-right: -30px;
+    }
+
+    .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+        margin-left: -30px;
+    }
+
+.system {
+    font-weight: bold;
+    color: red;
+}
+
+/*Hbeat start*/
+/* css heartbeat */
+.icon-heart {
+    height: 2em;
+    width: 2em;
+    display: inline-block;
+    position: relative;
+}
+
+    .icon-heart:before,
+    .icon-heart:after,
+    .icon-heart span:before,
+    .icon-heart span:after {
+        content: "";
+        display: block;
+    }
+    /* left hump */
+    .icon-heart:before {
+        position: absolute;
+        left: .1em;
+        top: 0px;
+        transform: rotate(-45deg);
+        background: #d90000;
+        height: 2em;
+        width: 1.2em;
+        border-top-left-radius: 3em;
+        border-top-right-radius: 3em;
+    }
+    /* right hump */
+    .icon-heart:after {
+        position: absolute;
+        right: .12em;
+        top: 0px;
+        transform: rotate(45deg);
+        background: #d90000;
+        height: 2em;
+        width: 1.2em;
+        border-top-left-radius: 3em;
+        border-top-right-radius: 3em;
+    }
+    /* the animated dot */
+    .icon-heart span.dot:after {
+        height: .2em;
+        width: .2em;
+        left: -.4em;
+        top: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 999;
+        border-radius: 100%;
+        -webkit-animation: heartbeat 1.08333s linear 0s infinite; /* Chrome, Safari, Opera */
+        animation: heartbeat 1.08333s linear 0s infinite;
+    }
+    /* straight part of line */
+    .icon-heart span.line {
+        height: 2px;
+        background: rgb(184, 175, 170);
+        top: 1.1em;
+        position: absolute;
+        left: -.2em;
+        display: block;
+        width: 2.4em;
+        z-index: 996;
+    }
+        /* first line peak */
+        .icon-heart span.line:before {
+            height: .5em;
+            top: -.23em;
+            position: absolute;
+            left: .45em;
+            display: block;
+            width: .5em;
+            z-index: 998;
+            transform: rotate(-45deg);
+            border-top: 2px solid rgb(184, 175, 170);
+            border-right: 2px solid rgb(184, 175, 170);
+            z-index: 998;
+            background: #d90000;
+        }
+        /* second line peak */
+        .icon-heart span.line:after {
+            height: .2em;
+            top: -.07em;
+            position: absolute;
+            left: 1.3em;
+            display: block;
+            width: .2em;
+            z-index: 997;
+            transform: rotate(-45deg);
+            border-top: 2px solid rgb(184, 175, 170);
+            border-right: 2px solid rgb(184, 175, 170);
+            z-index: 998;
+            background: #d90000;
+        }
+/* /css heartbeat */
+
+/* animation css */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes heartbeat {
+    0% {
+        background: rgba(255,255,255,0);
+        left: -.4em;
+        top: 50%;
+    }
+
+    20% {
+        background: rgba(255,255,255,.5);
+        left: .2em;
+        top: 50%;
+    }
+
+    35% {
+        background: rgba(255,255,255,1);
+        left: .4em;
+        top: 30%;
+    }
+
+    45% {
+        background: rgba(255,255,255,.5);
+        left: .7em;
+        top: 50%;
+    }
+
+    55% {
+        background: rgba(255,255,255,.5);
+        left: .9em;
+        top: 50%;
+    }
+
+    65% {
+        background: rgba(255,255,255,1);
+        left: 1.1em;
+        top: 42%;
+    }
+
+    75% {
+        background: rgba(255,255,255,.5);
+        left: 1.2em;
+        top: 50%;
+    }
+
+    100% {
+        background: rgba(255,255,255,0);
+        left: 2.4em;
+    }
+}
+
+/* Standard syntax */
+@keyframes heartbeat {
+    0% {
+        background: rgba(255,255,255,0);
+        left: -.4em;
+        top: 50%;
+    }
+
+    20% {
+        background: rgba(255,255,255,.5);
+        left: .2em;
+        top: 50%;
+    }
+
+    35% {
+        background: rgba(255,255,255,1);
+        left: .4em;
+        top: 30%;
+    }
+
+    45% {
+        background: rgba(255,255,255,.5);
+        left: .7em;
+        top: 50%;
+    }
+
+    55% {
+        background: rgba(255,255,255,.5);
+        left: .9em;
+        top: 50%;
+    }
+
+    65% {
+        background: rgba(255,255,255,1);
+        left: 1.1em;
+        top: 42%;
+    }
+
+    75% {
+        background: rgba(255,255,255,.5);
+        left: 1.2em;
+        top: 50%;
+    }
+
+    100% {
+        background: rgba(255,255,255,0);
+        left: 2.4em;
+    }
+}
+/* /animation */
+
+.icon-heart {
+    zoom: 3; /* make the heart big */
+}
+/* /not required */
+/*Hbeat end*/
+
+.icon-heart {
+    float: left;
+}
+
+.tension {
+    float: left;
+    margin-left: 25px;
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+    .tension strong {
+        color: #d90000;
+    }
+
+.fs12 {
+    font-size: 12px;
+}
