@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="tr">
+  <head>
+    <title>Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        body {
+            background: #00021b;
+            color: #333666;
+            padding: 0;
+            margin: 0;
+        }
+      section { text-align: center; }
+      .panzoom-parent { border: 2px solid #333; }
+      .panzoom-parent .panzoom { border: 2px dashed #666; }
+      .buttons { margin: 40px 0 0; }
+      #mainmap { width: 100%; height: auto; }
+    </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="jquery.panzoom.js"></script>
+    <script src="jquery.mousewheel.js"></script>
+  </head>
+  <body>
+    <section id="focal">
+      <div class="parent">
+        <div class="panzoom">
+          <img src="map.jpg" id="mainmap">
+        </div>
+      </div>
+      <script>
+        (function() {
+          var $section = $('#focal');
+          var $panzoom = $section.find('.panzoom').panzoom();
+          $panzoom.parent().on('mousewheel.focal', function( e ) {
+            e.preventDefault();
+            var delta = e.delta || e.originalEvent.wheelDelta;
+            var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+            $panzoom.panzoom('zoom', zoomOut, {
+              increment: 0.1,
+              animate: false,
+              focal: e
+            });
+          });
+        })();
+      </script>
+    </section>
+
+    <!--<script>
+      if ( !window.phantom && !/github/.test(window.location.hostname) ) document.write('<scr' + 'ipt src="http://' + location.hostname + ':35711/livereload.js"></scr' + 'ipt>');
+    </script>-->
+  </body>
+</html>
